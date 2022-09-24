@@ -13,5 +13,7 @@ def get_analytics(s):
 
 
     return analytics
-print (get_analytics(input("write sentense-->")))
-         
+s= input('write sentence-->')
+stat=get_analytics(s)
+for i in sorted(stat):
+    print(i,' = ', stat[i])
