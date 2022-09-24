@@ -1,4 +1,5 @@
-def tom(d,m,y):
+d,m,y=map(int, input().split('.'))
+def tom(d=d,m=m,y=y):
     """returns tomomorrow and yesterday date
     args:
     d,m,y-int"""
@@ -8,8 +9,9 @@ def tom(d,m,y):
     d30=[2,4,7,9]
     if y%4==0:
         if m in d31:
-            if d>32:
+            if d>31:
                 m+=1
+                d=1
                 if m>12:
                     m=1
                     y+=1
@@ -32,7 +34,7 @@ def tom(d,m,y):
 
     if y%4!=0:
         if m in d31:
-            if d>32:
+            if d>31:
                 m+=1
                 if m>12:
                     m=1
@@ -56,7 +58,7 @@ def tom(d,m,y):
 
     
     return [d, m, y] 
-def yest(d,m,y):
+def yest(d=d,m=m,y=y):
     d-=1
     d31=[1,3,5,7,8,10,12]
     d28=[2]
@@ -108,6 +110,6 @@ def yest(d,m,y):
                     y-=1
                 d=28
     return [d,m,y]                      
-print(tom(*list(map(int, input('date-->').split('.'))))) 
-print(yest(*list(map(int, input('date-->').split('.')))))       
+print(tom()) 
+print(yest())       
 
