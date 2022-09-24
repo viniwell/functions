@@ -10,3 +10,11 @@ def sum(a=str(n),i=-1,suma=0):
     else: 
         return(sum(i=i,suma=suma))
 print(sum())
+def lenght(i=-1,a=str(n)):
+    a=list(a)
+    i+=1
+    if i!=len(a):
+        return(lenght(i=i))
+    else:
+        return i
+print(lenght())
