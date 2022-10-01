@@ -1,3 +1,4 @@
+
 def analyt(a,c=0):
     a=list(a)
     b={}
@@ -15,7 +16,7 @@ def analyt(a,c=0):
         if i!=str(0):
             if i not in memory:
                 memory.append(i)
-                b[str(i)]=str(len(b[i]))+str('|')+(f'{(len(b[i])/c*100):.1f}%')
+                b[str(i)]=(f'Партия №{len(b[i])}|{(len(b[i])/c*100):.2f}%')
     return b
 print(analyt(input('input analytics----->')))
 
